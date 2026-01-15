@@ -1,7 +1,6 @@
 ############################################################
 # scRNA-seq analysis pipeline for GSE138852
-# Author: ChatGPT (Refined for Organization)
-# Date: 2026-01-14
+# Author: PRASHANTH S JAVALI
 # Requirements: R >= 4.1, Seurat v4, Monocle3
 ############################################################
 
@@ -209,6 +208,9 @@ Heatmap(avg_expr_folding_scaled, name = "Z-score", column_title = "Protein Foldi
 dev.off()
 
 
+
+########################## Optional but effective Downstream analysis ############################
+
 ############################
 # 9. TRAJECTORY ANALYSIS (MONOCLE3)
 ############################
@@ -302,4 +304,3 @@ if(nrow(neuro_pathways) > 0){
 saveRDS(seu, file = file.path(objdir, "GSE138852_final_processed.rds"))
 
 
-message("Pipeline complete. All outputs saved in: ", outdir)
